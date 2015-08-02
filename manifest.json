@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Enabler",
+    "description": "Getting worried about those disabled things no more",
+    "version": "1.0",
+    "browser_action": {
+        "default_title": "Enable things"
+        // "default_icon": "icon.png",
+        // "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": [
+            "lib/detect.js",
+            "lib/utils.js",
+            "lib/storage.js"
+        ],
+        "css": [
+            "css/enabler.css"
+        ],
+        "run_at": "document_start",
+        "all_frames": true
+    }]
+}
