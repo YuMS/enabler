@@ -22,7 +22,8 @@
         "js": [
             "lib/detect.js",
             "lib/utils.js",
-            "lib/storage.js"
+            "lib/warehouse.js",
+            "lib/element_factory.js"
         ],
         "css": [
             "css/enabler.css"

@@ -1,12 +1,13 @@
 "use strict";
 
 (function() {
-    if (Storage.isDisabling()) {
+    if (Warehouse.isDisabling()) {
         Utils.exitDisablingStatus();
     } else {
         var disabledElements = Detect.getDisabledElements();
         var rects = Utils.getElementsRectLists(disabledElements);
-        var enablerButtons = Utils.createEnablerButtons(rects, disabledElements);
-        Storage.disabling = true;
+        var enablerButtons = ElementFactory.createEnablerButtons(rects, disabledElements);
+        // var enablerIndicators = ElementFactory.createEnablerIndicators(rects, disabledElements);
+        Warehouse.disabling = true;
     }
 })();
