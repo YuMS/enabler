@@ -8,6 +8,11 @@
         // "default_icon": "icon.png",
         // "default_popup": "popup.html"
     },
+    "icons": {
+        "16": "icon/enabler16.png",
+        "64": "icon/enabler64.png",
+        "128": "icon/enabler128.png"
+    },
     "permissions": [
         "tabs",
         "<all_urls>"
